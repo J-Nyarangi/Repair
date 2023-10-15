@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="mechanicmapsVM" type="com.repairpal.app.modules.mechanicmaps.data.viewmodel.MechanicmapsVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearMechanicMaps"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumncomputer"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_17pxh"
+                android:layout_marginStart="@dimen/_17pxh"
+                android:layout_marginTop="@dimen/_13pxv"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearRowcomputer"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageComputer"
+                        android:layout_height="@dimen/_32pxh"
+                        android:layout_width="@dimen/_26pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_computer"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_computer"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtYourLocation"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_11pxv"
+                        android:layout_marginStart="@dimen/_92pxh"
+                        android:layout_marginTop="@dimen/_5pxv"
+                        android:layout_weight="0.75"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{mechanicmapsVM.mechanicmapsModel.txtYourLocation}"
+                        style="@style/txtInterbold12" tools:text="@string/lbl_your_location"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <ImageView android:id="@+id/imageFindOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_482pxh"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_23pxv"
+                android:layout_width="@dimen/_337pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_find1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_find1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnStartInspectionOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_38pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_15pxv"
+                android:singleLine="true"
+                android:text="@string/msg_start_inspectio"
+                android:textAllCaps="false" style="@style/btnSolid_1" tools:text="@string/msg_start_inspectio"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnCancelRequest"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_46pxv"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_53pxv"
+                android:layout_width="@dimen/_157pxh"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_15pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_cancel_request"
+                android:textAllCaps="false" style="@style/btnSolid_1" tools:text="@string/lbl_cancel_request"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

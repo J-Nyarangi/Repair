@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="repairchargesVM" type="com.repairpal.app.modules.repaircharges.data.viewmodel.RepairchargesVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearRepairCharges"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:id="@+id/linearColumnarrowone"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12pxh"
+                android:layout_marginStart="@dimen/_12pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowarrowone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/frameStackarrowone"
+                        android:layout_height="@dimen/_28pxv"
+                        android:layout_width="@dimen/_44pxh" style="@style/groupStylewhite_A700">
+                        <ImageView android:id="@+id/imageArrowOne"
+                            android:layout_gravity="bottom|center"
+                            android:layout_height="@dimen/_3pxh"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:layout_marginEnd="@dimen/_5pxh"
+                            android:layout_marginStart="@dimen/_5pxh"
+                            android:layout_marginTop="@dimen/_10pxv"
+                            android:layout_width="@dimen/_33pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow1"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow1"/>
+                    </FrameLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtVehiclerepair"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_4pxv"
+                        android:layout_marginStart="@dimen/_59pxh"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_weight="0.75"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{repairchargesVM.repairchargesModel.txtVehiclerepair}"
+                        style="@style/txtInterbold12" tools:text="@string/msg_vehicle_repair"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnkshcounter"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylegray_500">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtKshCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_50pxh"
+                    android:layout_marginStart="@dimen/_50pxh"
+                    android:layout_marginTop="@dimen/_68pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{repairchargesVM.repairchargesModel.txtKshCounter}"
+                    style="@style/txtInterregular48" tools:text="@string/lbl_ksh_2000"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnConfirmPaymentOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_50pxh"
+                    android:layout_marginStart="@dimen/_50pxh"
+                    android:layout_marginTop="@dimen/_39pxv"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_confirm_payment"
+                    android:textAllCaps="false"
+                    style="@style/btnSolid_1" tools:text="@string/lbl_confirm_payment"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnDecline"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_74pxv"
+                    android:layout_marginEnd="@dimen/_50pxh"
+                    android:layout_marginStart="@dimen/_50pxh"
+                    android:layout_marginTop="@dimen/_24pxv"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_decline"
+                    android:textAllCaps="false"
+                    style="@style/btnSolid_1" tools:text="@string/lbl_decline"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtVehicleissues"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_27pxh"
+                android:layout_marginStart="@dimen/_27pxh"
+                android:layout_marginTop="@dimen/_42pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{repairchargesVM.repairchargesModel.txtVehicleissues}"
+                style="@style/txtInterbold12" tools:text="@string/lbl_vehicle_issues"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtIssueCounter"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_30pxh"
+                android:layout_marginStart="@dimen/_30pxh"
+                android:layout_marginTop="@dimen/_42pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{repairchargesVM.repairchargesModel.txtIssueCounter}"
+                style="@style/txtInterregular12" tools:text="@string/lbl_issue_1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtIssueCounterOne"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_34pxh"
+                android:layout_marginStart="@dimen/_34pxh"
+                android:layout_marginTop="@dimen/_41pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{repairchargesVM.repairchargesModel.txtIssueCounterOne}"
+                style="@style/txtInterregular12" tools:text="@string/lbl_issue_2"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtIssueCounterTwo"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_34pxh"
+                android:layout_marginStart="@dimen/_34pxh"
+                android:layout_marginTop="@dimen/_42pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{repairchargesVM.repairchargesModel.txtIssueCounterTwo}"
+                style="@style/txtInterregular12" tools:text="@string/lbl_issue_3"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
