@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.repairpal.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.repairpal.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.repairpal.app.modules.choosevehicle.ui.ChoosevehicleActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.mechanicmaps.ui.MechanicmapsActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.repairpal.app.modules.signin.ui.SigninActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.repairpal.app.modules.mechanicpaymentsuccessful.ui.MechanicpaymentsuccessfulActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.usermap.ui.UsermapActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.userpayment.ui.UserpaymentActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.carissues.ui.CarissuesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.mechanicregistration.ui.MechanicRegistrationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.repaircharges.ui.RepairchargesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.mechanicdashboard.ui.MechanicdashboardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.userpaymentsuccessful.ui.UserpaymentsuccessfulActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.registration.ui.RegistrationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.userdashboard.ui.UserdashboardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.requestservice.ui.RequestserviceActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.repairpal.app.modules.clientdetails.ui.ClientdetailsActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

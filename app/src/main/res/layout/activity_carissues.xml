@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="carissuesVM" type="com.repairpal.app.modules.carissues.data.viewmodel.CarissuesVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearCarIssues"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearCarIssueList"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowarrowthree"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_23pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowThree"
+                    android:layout_height="@dimen/_7pxh"
+                    android:layout_marginBottom="@dimen/_275pxv"
+                    android:layout_width="@dimen/_1pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow3"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow3"/>
+                <LinearLayout android:id="@+id/linearColumnarrowone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_22pxh"
+                    android:layout_weight="1.0"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <androidx.appcompat.widget.Toolbar
+                        android:gravity="start"
+                        android:id="@+id/toolbarToolbar"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="match_parent" app:contentInsetStart="0dp">
+                        <LinearLayout
+                            android:id="@+id/linearRowarrowone"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <FrameLayout
+                                android:id="@+id/frameStackarrowone"
+                                android:layout_height="@dimen/_28pxv"
+                                android:layout_width="@dimen/_44pxh" style="@style/groupStylewhite_A700">
+                                <ImageView
+                                    android:id="@+id/imageArrowOne"
+                                    android:layout_gravity="bottom|center"
+                                    android:layout_height="@dimen/_3pxh"
+                                    android:layout_marginBottom="@dimen/_10pxv"
+                                    android:layout_marginEnd="@dimen/_5pxh"
+                                    android:layout_marginStart="@dimen/_5pxh"
+                                    android:layout_marginTop="@dimen/_10pxv"
+                                    android:layout_width="@dimen/_33pxh"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_arrow1"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow1"/>
+                            </FrameLayout>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtCarissuelist"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_2pxv"
+                                android:layout_marginStart="@dimen/_77pxh"
+                                android:layout_marginTop="@dimen/_10pxv"
+                                android:layout_weight="0.63"
+                                android:layout_width="0dp"
+                                android:singleLine="true"
+                                android:text="@{carissuesVM.carissuesModel.txtCarissuelist}"
+                                style="@style/txtInterbold12" tools:text="@string/lbl_car_issue_list"/>
+                        </LinearLayout>
+                    </androidx.appcompat.widget.Toolbar>
+                    <LinearLayout android:gravity="end"
+                        android:id="@+id/linearRowissuecounter"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_47pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtIssueCounter"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8pxv"
+                            android:layout_weight="0.57"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{carissuesVM.carissuesModel.txtIssueCounter}"
+                            style="@style/txtInterregular12" tools:text="@string/lbl_issue_1"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_bluegray_100_border_black_900"
+                            android:id="@+id/viewRectangleFortyFour"
+                            android:layout_height="@dimen/_23pxv"
+                            android:layout_marginBottom="@dimen/_1pxv"
+                            android:layout_marginStart="@dimen/_209pxh" android:layout_width="@dimen/_29pxh"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="end"
+                        android:id="@+id/linearRowissuecounterOne"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_19pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtIssueCounterOne"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_11pxv"
+                            android:layout_weight="0.59"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{carissuesVM.carissuesModel.txtIssueCounterOne}"
+                            style="@style/txtInterregular12" tools:text="@string/lbl_issue_2"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_bluegray_100_border_black_900"
+                            android:id="@+id/viewRectangleFortySix"
+                            android:layout_height="@dimen/_23pxv"
+                            android:layout_marginBottom="@dimen/_3pxv"
+                            android:layout_marginStart="@dimen/_206pxh" android:layout_width="@dimen/_29pxh"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="end"
+                        android:id="@+id/linearRowissuecounterTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_19pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtIssueCounterTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_11pxv"
+                            android:layout_weight="0.59"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{carissuesVM.carissuesModel.txtIssueCounterTwo}"
+                            style="@style/txtInterregular12" tools:text="@string/lbl_issue_3"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_bluegray_100_border_black_900"
+                            android:id="@+id/viewRectangleFortyFive"
+                            android:layout_height="@dimen/_23pxv"
+                            android:layout_marginBottom="@dimen/_3pxv"
+                            android:layout_marginStart="@dimen/_206pxh" android:layout_width="@dimen/_29pxh"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="end"
+                        android:id="@+id/linearRowissuecounterThree"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_22pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtIssueCounterThree"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8pxv"
+                            android:layout_weight="0.59"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{carissuesVM.carissuesModel.txtIssueCounterThree}"
+                            style="@style/txtInterregular12" tools:text="@string/lbl_issue_4"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_bluegray_100_border_black_900"
+                            android:id="@+id/viewRectangleFortyFourOne"
+                            android:layout_height="@dimen/_23pxv"
+                            android:layout_marginBottom="@dimen/_1pxv"
+                            android:layout_marginStart="@dimen/_206pxh" android:layout_width="@dimen/_29pxh"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="end"
+                        android:id="@+id/linearRowissuecounterFour"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_19pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtIssueCounterFour"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_11pxv"
+                            android:layout_weight="0.59"
+                            android:layout_width="0dp"
+                            android:singleLine="true"
+                            android:text="@{carissuesVM.carissuesModel.txtIssueCounterFour}"
+                            style="@style/txtInterregular12" tools:text="@string/lbl_issue_5"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_bluegray_100_border_black_900"
+                            android:id="@+id/viewRectangleFortyFiveOne"
+                            android:layout_height="@dimen/_23pxv"
+                            android:layout_marginBottom="@dimen/_3pxv"
+                            android:layout_marginStart="@dimen/_206pxh" android:layout_width="@dimen/_29pxh"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/black_900"
+                android:id="@+id/lineLineTwo"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_marginTop="@dimen/_398pxv" android:layout_width="@dimen/_360pxh"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowsubmit"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_30pxv"
+                android:layout_marginEnd="@dimen/_23pxh"
+                android:layout_marginStart="@dimen/_23pxh"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnSubmit"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.73"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_submit"
+                    android:textAllCaps="false"
+                    style="@style/btnSolid_1" tools:text="@string/lbl_submit"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtKshCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_21pxv"
+                    android:layout_marginStart="@dimen/_71pxh"
+                    android:layout_marginTop="@dimen/_9pxv"
+                    android:layout_weight="0.27"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{carissuesVM.carissuesModel.txtKshCounter}"
+                    style="@style/txtInterbold12" tools:text="@string/lbl_ksh_2000"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

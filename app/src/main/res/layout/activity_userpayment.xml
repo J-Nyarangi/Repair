@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="userpaymentVM" type="com.repairpal.app.modules.userpayment.data.viewmodel.UserpaymentVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearUserPayment"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnarrowone"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_21pxh"
+                android:layout_marginStart="@dimen/_21pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowarrowone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/frameStackarrowone"
+                        android:layout_height="@dimen/_28pxv"
+                        android:layout_width="@dimen/_44pxh" style="@style/groupStylewhite_A700">
+                        <ImageView android:id="@+id/imageArrowOne"
+                            android:layout_gravity="bottom|center"
+                            android:layout_height="@dimen/_3pxh"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:layout_marginEnd="@dimen/_5pxh"
+                            android:layout_marginStart="@dimen/_5pxh"
+                            android:layout_marginTop="@dimen/_10pxv"
+                            android:layout_width="@dimen/_33pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow1"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow1"/>
+                    </FrameLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtChoosepayment"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_4pxv"
+                        android:layout_marginStart="@dimen/_35pxh"
+                        android:layout_marginTop="@dimen/_8pxv"
+                        android:layout_weight="0.77"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{userpaymentVM.userpaymentModel.txtChoosepayment}"
+                        style="@style/txtInterbold12" tools:text="@string/msg_choose_payment"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <LinearLayout android:id="@+id/linearRowellipseseven"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_21pxh"
+                android:layout_marginTop="@dimen/_45pxv"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylebluegray_100">
+                <LinearLayout android:id="@+id/linearRowcardone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginTop="@dimen/_11pxv"
+                    android:layout_weight="0.83"
+                    android:layout_width="0dp" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageCardOne"
+                        android:layout_height="@dimen/_52pxh"
+                        android:layout_width="@dimen/_56pxh"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_card1}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_card1"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCreditcard"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_15pxv"
+                        android:layout_marginStart="@dimen/_19pxh"
+                        android:layout_marginTop="@dimen/_21pxv"
+                        android:layout_weight="0.53"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{userpaymentVM.userpaymentModel.txtCreditcard}"
+                        style="@style/txtInterregular12" tools:text="@string/lbl_credit_card"/>
+                </LinearLayout>
+                <View
+                    android:background="@drawable/rectangle_bg_white_a700_border_black_900_radius_14"
+                    android:id="@+id/viewEllipseSeven"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_marginBottom="@dimen/_20pxv"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_132pxh"
+                    android:layout_marginTop="@dimen/_27pxv" android:layout_width="@dimen/_28pxh"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowellipseeight"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_21pxh"
+                android:layout_marginTop="@dimen/_36pxv"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylebluegray_100">
+                <LinearLayout android:id="@+id/linearRowmpesaone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_27pxv"
+                    android:layout_marginStart="@dimen/_11pxh"
+                    android:layout_marginTop="@dimen/_25pxv"
+                    android:layout_weight="0.79"
+                    android:layout_width="0dp" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageMpesaOne"
+                        android:layout_height="@dimen/_21pxh"
+                        android:layout_width="@dimen/_51pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_mpesa1"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_mpesa1"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMpesa"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_2pxv"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_3pxv"
+                        android:layout_weight="0.43"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{userpaymentVM.userpaymentModel.txtMpesa}"
+                        style="@style/txtInterregular12" tools:text="@string/lbl_mpesa"/>
+                </LinearLayout>
+                <View
+                    android:background="@drawable/rectangle_bg_white_a700_border_black_900_radius_14"
+                    android:id="@+id/viewEllipseEight"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_marginBottom="@dimen/_24pxv"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_157pxh"
+                    android:layout_marginTop="@dimen/_23pxv" android:layout_width="@dimen/_28pxh"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnPayNow"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_46pxv"
+                android:layout_marginEnd="@dimen/_21pxh"
+                android:layout_marginStart="@dimen/_21pxh"
+                android:layout_marginTop="@dimen/_64pxv"
+                android:layout_width="@dimen/_252pxh"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_15pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_pay_now"
+                android:textAllCaps="false" style="@style/btnSolid_1" tools:text="@string/lbl_pay_now"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtGotohomepage"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_21pxh"
+                android:layout_marginStart="@dimen/_21pxh"
+                android:layout_marginTop="@dimen/_48pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{userpaymentVM.userpaymentModel.txtGotohomepage}"
+                style="@style/txtInterbold12_1" tools:text="@string/lbl_go_to_homepage"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

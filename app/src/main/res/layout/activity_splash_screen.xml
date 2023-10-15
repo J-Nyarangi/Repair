@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashScreenVM" type="com.repairpal.app.modules.splashscreen.data.viewmodel.SplashScreenVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameSplashScreen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageRepairpalOne"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_repairpal1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_repairpal1"/>
+        <TextView android:ellipsize="end" android:gravity="top|start"
+            android:id="@+id/txtRepairpal"
+            android:layout_gravity="top|end"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_330pxv"
+            android:layout_marginEnd="@dimen/_78pxh"
+            android:layout_marginStart="@dimen/_78pxh"
+            android:layout_marginTop="@dimen/_330pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{splashScreenVM.splashScreenModel.txtRepairpal}"
+            style="@style/txtInterbold40" tools:text="@string/lbl_repairpal"/>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="mechanicpaymentsuccessfulVM" type="com.repairpal.app.modules.mechanicpaymentsuccessful.data.viewmodel.MechanicpaymentsuccessfulVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumncheckone"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearConfirmPayment"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <ImageView android:id="@+id/imageCheckOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_237pxh"
+                android:layout_marginEnd="@dimen/_54pxh"
+                android:layout_marginStart="@dimen/_54pxh"
+                android:layout_marginTop="@dimen/_122pxv"
+                android:layout_width="@dimen/_221pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_check1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_check1"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtInspectionand"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_54pxh"
+                android:layout_marginStart="@dimen/_54pxh"
+                android:layout_marginTop="@dimen/_34pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{mechanicpaymentsuccessfulVM.mechanicpaymentsuccessfulModel.txtInspectionand}"
+                style="@style/txtInterregular12" tools:text="@string/msg_inspection_and"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnBackToHomepageOne"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_54pxh"
+                android:layout_marginStart="@dimen/_54pxh"
+                android:layout_marginTop="@dimen/_64pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_15pxv"
+                android:singleLine="true"
+                android:text="@string/msg_back_to_homepag"
+                android:textAllCaps="false" style="@style/btnSolid_1" tools:text="@string/msg_back_to_homepag"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="usermapVM" type="com.repairpal.app.modules.usermap.data.viewmodel.UsermapVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearUserMap"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnarrowone"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearRowarrowone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/frameStackarrowone"
+                        android:layout_height="@dimen/_28pxv"
+                        android:layout_width="@dimen/_44pxh" style="@style/groupStylewhite_A700">
+                        <ImageView android:id="@+id/imageArrowOne"
+                            android:layout_gravity="bottom|center"
+                            android:layout_height="@dimen/_3pxh"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:layout_marginEnd="@dimen/_5pxh"
+                            android:layout_marginStart="@dimen/_5pxh"
+                            android:layout_marginTop="@dimen/_10pxv"
+                            android:layout_width="@dimen/_33pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow1"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow1"/>
+                    </FrameLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtYourLocation"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_6pxv"
+                        android:layout_marginStart="@dimen/_81pxh"
+                        android:layout_marginTop="@dimen/_6pxv"
+                        android:layout_weight="0.65"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{usermapVM.usermapModel.txtYourLocation}"
+                        style="@style/txtInterbold12" tools:text="@string/lbl_your_location"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <ImageView android:id="@+id/imageFindOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_444pxh"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_29pxv"
+                android:layout_width="@dimen/_337pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_find1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_find1"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnperone"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_23pxv"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylegray_500">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowperone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_9pxh"
+                    android:layout_marginTop="@dimen/_17pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imagePerOne"
+                        android:layout_height="@dimen/_86pxh"
+                        android:layout_width="@dimen/_80pxh"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_per1}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_per1"/>
+                    <TextView android:id="@+id/txtDavidNoelsSpr"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_37pxv"
+                        android:layout_marginStart="@dimen/_25pxh"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="0.58"
+                        android:layout_width="0dp"
+                        android:text="@{usermapVM.usermapModel.txtDavidNoelsSpr}"
+                        style="@style/txtInterregular12" tools:text="@string/msg_david_noels_sp"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearRowfindAnother"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_15pxv"
+                    android:layout_marginEnd="@dimen/_13pxh"
+                    android:layout_marginStart="@dimen/_9pxh"
+                    android:layout_marginTop="@dimen/_91pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:ellipsize="end" android:gravity="center"
+                        android:id="@+id/btnFindAnother"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:paddingBottom="@dimen/_15pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_15pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_find_another"
+                        android:textAllCaps="false"
+                        style="@style/btnSolid_1" tools:text="@string/lbl_find_another"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:ellipsize="end" android:gravity="center"
+                        android:id="@+id/btnSendRequest"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5pxh"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:paddingBottom="@dimen/_15pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_15pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_send_request"
+                        android:textAllCaps="false"
+                        style="@style/btnSolid_2" tools:text="@string/lbl_send_request"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
